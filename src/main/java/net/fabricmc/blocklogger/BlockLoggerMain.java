@@ -46,7 +46,7 @@ public class BlockLoggerMain implements ModInitializer {
 		try {
 			file.createNewFile();
 		} catch (IOException e) {
-			LOGGER.warn("BlockLogger: File Error! File could not be created!");
+			LOGGER.error("BlockLogger: File Error! File could not be created!");
 			return;
 		}
 
@@ -64,7 +64,7 @@ public class BlockLoggerMain implements ModInitializer {
 		if (writeFile(file, jsonObject)) {
 			LOGGER.info("BlockLogger: Finished Block logging!");
 		} else {
-			LOGGER.warn("BlockLogger: Failed Block logging!");
+			LOGGER.error("BlockLogger: Failed Block logging!");
 		}
 	}
 
@@ -83,13 +83,12 @@ public class BlockLoggerMain implements ModInitializer {
 		try {
 			file.createNewFile();
 		} catch (IOException e) {
-			LOGGER.warn("BlockLogger: File Error! File could not be created!");
+			LOGGER.error("BlockLogger: File Error! File could not be created!");
 			return;
 		}
 
 		for (String i : itemNames) {
 			String item = formatItemName(i);
-			LOGGER.warn(item);
 			String mod = item.split(":")[0];
 
 			if (!jsonObject.has(mod)) {
@@ -102,7 +101,7 @@ public class BlockLoggerMain implements ModInitializer {
 		if (writeFile(file, jsonObject)) {
 			LOGGER.info("BlockLogger: Finished Item logging!");
 		} else {
-			LOGGER.warn("BlockLogger: Failed Item logging!");
+			LOGGER.error("BlockLogger: Failed Item logging!");
 		}
 	}
 
@@ -113,7 +112,7 @@ public class BlockLoggerMain implements ModInitializer {
 			writer.write(gson.toJson(jsonElement));
 			writer.close();
 		} catch (IOException e) {
-			LOGGER.warn("BlockLogger: Writing JSON file failed!");
+			LOGGER.error("BlockLogger: Writing JSON file failed!");
 			return false;
 		}
 		return true;
