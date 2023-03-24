@@ -1,9 +1,3 @@
-# Fabric Example Mod
+# BlockLogger Mod
 
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This mod logs all blocks and items existing in the minecraft registry on game startup into json files. (including blocks and items added by mods)
