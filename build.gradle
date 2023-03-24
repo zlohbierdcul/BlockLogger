@@ -41,6 +41,7 @@ processResources {
 	}
 }
 
+
 tasks.withType(JavaCompile).configureEach {
 	// Minecraft 1.18 (1.18-pre2) upwards uses Java 17.
 	it.options.release = 17
@@ -75,3 +76,5 @@ publishing {
 		// retrieving dependencies.
 	}
 }
+
+

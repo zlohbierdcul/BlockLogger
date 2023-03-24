@@ -3,14 +3,14 @@
   "id": "modid",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "BlockLogger",
+  "description": "This mod just puts all Block and Item IDs in a JSON file, no more, no less!",
   "authors": [
-    "Me!"
+    "Snacka"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/zlohbierdcul/BlockLogger"
   },
 
   "license": "CC0-1.0",
@@ -19,17 +19,14 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.fabricmc.blocklogger.BlockLoggerMain"
     ]
   },
-  "mixins": [
-    "modid.mixins.json"
-  ],
 
   "depends": {
     "fabricloader": ">=0.14.17",
     "fabric-api": "*",
-    "minecraft": "~1.19.4",
+    "minecraft": "~1.19.2",
     "java": ">=17"
   },
   "suggests": {
