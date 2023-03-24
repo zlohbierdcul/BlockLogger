@@ -4,7 +4,7 @@ import com.google.gson.*;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,7 +41,7 @@ public class BlockLoggerMain implements ModInitializer {
 		}
 
 		LOGGER.info("BlockLogger: Starting Block logging ...");
-		List<String> blockNames = Registry.BLOCK.stream().map(Block::toString).toList();
+		List<String> blockNames = Registries.BLOCK.stream().map(Block::toString).toList();
 
 		try {
 			file.createNewFile();
@@ -78,7 +78,7 @@ public class BlockLoggerMain implements ModInitializer {
 		}
 
 		LOGGER.info("BlockLogger: Starting Item logging ...");
-		List<String> itemNames = Registry.ITEM.stream().map(Item::getTranslationKey).toList();
+		List<String> itemNames = Registries.ITEM.stream().map(Item::getTranslationKey).toList();
 
 		try {
 			file.createNewFile();
