@@ -87,8 +87,6 @@ public class BlockLoggerMain implements ModInitializer {
 			return;
 		}
 
-		String modName = "minecraft";
-		JsonArray modArray = new JsonArray();
 		for (String i : itemNames) {
 			String item = formatItemName(i);
 			LOGGER.warn(item);
