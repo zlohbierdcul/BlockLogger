@@ -1,4 +1,4 @@
-package net.fabricmc.blocklogger;
+package de.blocklogger;
 
 import com.google.gson.*;
 import net.fabricmc.api.ModInitializer;
